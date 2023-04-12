@@ -1,0 +1,153 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Bebas Neue', cursive;
+}
+
+/* Set container to full height of viewport */
+.parallax-container {
+  height: 120vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Set background image with parallax effect */
+.parallax-background {
+  height: 100%;
+  width: 100%;
+  background-image: url('https://wallpapercave.com/wp/wp4907988.jpg'); /* Replace with your desired background image */
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-attachment: fixed; /* Add the parallax effect */
+}
+
+/* Center content vertically and horizontally */
+.parallax-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+
+/* Set container to full height and width of viewport */
+.container {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  perspective: 1000px;
+}
+
+/* Set cube properties and animation */
+.cube {
+  height: 200px;
+  width: 200px;
+  position: relative;
+  margin: 0 auto;
+  top: 50%;
+  transform-style: preserve-3d;
+  animation: rotate 60s infinite linear;
+}
+
+i {
+  transform: scale(5);
+}
+
+.side {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 200px;
+  background-image: linear-gradient(rgba(202, 138, 223, 0.5), rgb(68, 128, 159), rgb(53, 87, 147));
+}
+
+.front {
+  transform: rotateY(0deg) translateZ(100px);
+}
+
+.back {
+  transform: rotateY(180deg) translateZ(100px);
+}
+
+.left {
+  transform: rotateY(-90deg) translateZ(100px);
+}
+
+.right {
+  transform: rotateY(90deg) translateZ(100px);
+}
+
+.top {
+  transform: rotateX(90deg) translateZ(100px);
+}
+
+.bottom {
+  transform: rotateX(-90deg) translateZ(100px);
+}
+
+.section {
+  height: 100vh;
+  width: 100vw;
+}
+
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  height: 10vh;
+  background-color: rgb(53, 87, 147);
+  z-index: 100;
+  font-size: 2rem;
+}
+
+.sticky-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.sticky-nav li {
+  margin: 1rem 2rem 1rem 2rem;
+}
+
+.sticky-nav a {
+  text-decoration: none;
+  color: whitesmoke;
+  
+}
+
+.sticky-nav a:hover {
+  color: rgb(130, 181, 218);
+}
+
+#backToTopBtn {
+  position: sticky; /* Position the button */
+  bottom: 20px;
+  right: 20px;
+  background-color: whitesmoke;
+  color: rgb(53, 87, 147);
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+/* Define animation */
+@keyframes rotate {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(1turn) rotateY(1turn) rotateZ(1turn);
+  }
+}
